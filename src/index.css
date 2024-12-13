@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root{
+  --light-title:#ECF1F0;
+  --light-subtitle:#B6B6B6
+}
+@layer base{
+  *{
+    @apply p-0 m-0 box-border font-raleway 
+  }
+   body{
+    @apply bg-backgorund
+   }
+   a{
+    @apply outline-none border-none
+   }
+}
+@layer utilities{
+  .scrollbar {
+    scrollbar-width: thin; 
+    
+  }
+  .scrollbar::-webkit-scrollbar {
+
+    @apply w-2 h-2
+  }
+  .scrollbar::-webkit-scrollbar-track {
+    @apply bg-[#1e293b] rounded
+  }
+  
+ 
+  .scrollbar::-webkit-scrollbar-thumb {   
+    @apply bg-[#64748b] rounded
+  }
+ 
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+ 
+    @apply bg-[#475569]
+  }
+  .h1{
+    @apply font-bold text-[72px];
+    color: var(--light-title);
+  }
+  .h2{
+    @apply font-bold text-[48px];
+    color: var(--light-title);
+  }
+  .h3{
+    @apply font-bold text-[36px];
+    color: var(--light-title);
+  }
+
+  .h4{
+    @apply font-bold text-[28px];
+    color: var(--light-title);
+  }
+
+  .h5{
+    @apply font-bold text-[24px];
+    color: var(--light-title);
+  }
+  .h6{
+    @apply font-bold text-[20px];
+    color: var(--light-title);
+  }
+
+  .h7{
+    @apply font-medium text-[16px] ;
+    color: var(--light-title);
+  }
+  .s1{
+    @apply font-normal text-[18px] font-roboto;
+    color: var(--light-subtitle);
+  }
+  .s2{
+    @apply font-normal text-[15px] font-roboto;
+    color: var(--light-subtitle);
+  }
+ 
+  .l1{
+    @apply font-semibold  text-white
+  }
+
+  .bg-above-the-fold{
+    @apply before:content-[''] before:absolute before:bg-[#7000FF] before:blur-[200px] before:top-1/3 before:right-1/2  before:w-[500px] before:h-[100px]  before:rounded-full  ;
+    @apply after:content-[''] after:absolute after:bg-[#FF00C7] after:blur-[200px] after:top-1/3 after:left-1/2  after:w-[500px] after:h-[100px]  after:rounded-full  ;
+  }
+  .bg-features{
+    @apply before:content-[''] before:absolute before:bg-[#60FFE7] before:blur-[150px] before:bottom-32  before:right-0 before:max-md:left-0  before:w-[500px] before:h-[80px]  before:rounded-full  ;
+  }
+}
