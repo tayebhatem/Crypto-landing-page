@@ -2,9 +2,9 @@ import { StepsType } from "../types"
 import Card from "./card"
 
 const StepItem = ({stepItem}:{stepItem:StepsType}) => {
-    const {id,icon,text,title}=stepItem
+    const {icon,text,title}=stepItem
   return (
-   <Card key={id}>
+   <Card >
     <div className="flex flex-row items-center gap-x-4">
         <img src={`/images/${icon}.svg`} className="max-sm:size-12 max-lg:size-14 size-20"/>
       <div>

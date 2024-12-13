@@ -2,6 +2,7 @@
 import { ArticleItemType } from '../types'
 import Card from './card'
 
+
 const ArticleItem = ({articleItem}:{articleItem:ArticleItemType}) => {
     const {text,thumbnail,title,caption}=articleItem
 

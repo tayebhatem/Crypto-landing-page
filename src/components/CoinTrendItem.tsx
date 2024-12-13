@@ -4,9 +4,9 @@ import Card from './card'
 
 
 const CoinTrendItem = ({coinItem}:{coinItem:CointItemType}) => {
-    const {logo,id,caption,name,lastPrice,change,marketState}=coinItem
+    const {logo,caption,name,lastPrice,change,marketState}=coinItem
   return (
-    <Card key={id}>
+    <Card >
         <div className='space-y-[17px]'>
 
        

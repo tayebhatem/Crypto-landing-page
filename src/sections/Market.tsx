@@ -4,7 +4,7 @@ import clsx from 'clsx'
 import CryptoTable from '../components/table'
 import { BiSearch } from 'react-icons/bi'
 import { CointItemType } from '../types'
-
+import {motion} from 'framer-motion'
 const Market = () => {
     const [selectedCategory, setSelectedCategory] = useState(categories[0])
    const [coinsFilterData, setCoinsFilterData] = useState<CointItemType[]>(coinsData)
@@ -18,9 +18,21 @@ const Market = () => {
   return (
    <section>
     <div className='container mx-auto space-y-8 max-md:px-6 px-12'>
-        <h3 className='h3'>Market Update</h3>
+        <motion.h3 
+          initial={{ y: 100, opacity: 0 }} 
+          whileInView={{ y: 0, opacity: 1 }} 
+          viewport={{ once: true, amount: 0.5 }} 
+          transition={{ type: "spring", stiffness: 50, duration: 0.8 }}
+ 
+        className='h3'>Market Update</motion.h3>
 
-        <div className='space-y-[22px]'>
+        <motion.div 
+        initial={{ y: 100, opacity: 0 }} 
+        whileInView={{ y: 0, opacity: 1 }} 
+        viewport={{ once: true, amount: 0.5 }} 
+        transition={{ type: "spring", stiffness: 50, duration: 0.8 }}
+        
+        className='space-y-[22px]'>
             <p className='s1'>Cryptocurrency Categories</p>
            <div className='flex flex-row items-center gap-10 flex-wrap'>
            <ul className='flex flex-row items-center gap-x-3 overflow-hidden max-xl:order-last'>
@@ -49,13 +61,17 @@ const Market = () => {
            <CryptoTable coinData={coinsFilterData}/>
 
          
-        </div>
+        </motion.div>
 
-       <div>
+        <motion.div 
+        initial={{ y: 100, opacity: 0 }} 
+        whileInView={{ y: 0, opacity: 1 }} 
+        viewport={{ once: true, amount: 0.5 }} 
+        transition={{ type: "spring", stiffness: 50, duration: 0.8 }}>
        <a href='/' className='text-primary underline font-semibold cursor-pointer '>
            See All Coins
            </a>
-       </div>
+           </motion.div>
     </div>
    </section>
   )

@@ -4,9 +4,9 @@ import Card from './card'
 import { BsArrowRight } from 'react-icons/bs'
 
 const FeaterItem = ({featerItem}:{featerItem:FeatureItemType}) => {
-    const {id,title,text,icon,link}=featerItem
+    const {title,text,icon,link}=featerItem
   return (
-    <Card key={id}>
+    <Card >
       <div className='space-y-8 '>
      <div className='space-y-4  '>
      <img src={`images/${icon}.svg`} className='size-20'/>

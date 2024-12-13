@@ -1,13 +1,18 @@
 import Button from "../components/button"
 import FeaterItem from "../components/FeaterItem"
 import { featuresData } from "../constants"
-
+import {motion} from 'framer-motion'
 
 const Features = () => {
   return (
     <section className="py-20 relative bg-features overflow-x-clip ">
      <div className="container mx-auto space-y-20 max-md:px-6 px-12">
-     <div className="space-y-4 ">
+     <motion.div 
+       initial={{ y: 100, opacity: 0 }} 
+       whileInView={{ y: 0, opacity: 1 }} 
+       viewport={{ once: true, amount: 0.5 }} 
+       transition={{ type: "spring", stiffness: 50, duration: 0.8 }}
+     className="space-y-4 ">
     
      <h3 className="h3 text-center">
     CryptoCap Amazing Faetures
@@ -15,16 +20,26 @@ const Features = () => {
     <p className="s1 text-center">
     Explore sensational features to prepare your best investment in cryptocurrency
     </p>
-     </div>
-     <div className="grid max-md:grid-cols-1 max-lg:grid-cols-2 max-xl:grid-cols-3  grid-cols-4 gap-6">
+     </motion.div>
+     <motion.div 
+       initial={{ y: 100, opacity: 0 }} 
+       whileInView={{ y: 0, opacity: 1 }} 
+       viewport={{ once: true, amount: 0.5 }} 
+       transition={{ type: "spring", stiffness: 50, duration: 0.8 }}
+     className="grid max-md:grid-cols-1 max-lg:grid-cols-2 max-xl:grid-cols-3  grid-cols-4 gap-6">
       {
         featuresData.map((item)=>(
             <FeaterItem featerItem={item}/>
         ))
       }
-        </div>
+        </motion.div>
 
-        <div className="flex max-md:flex-col max-md:gap-y-4 flex-row max-lg:gap-x-4 py-5 max-lg:px-8  px-[60px] justify-between items-center rounded-xl border-[1px] border-white/10 relative z-10">
+        <motion.div 
+          initial={{ y: 100, opacity: 0 }} 
+          whileInView={{ y: 0, opacity: 1 }} 
+          viewport={{ once: true, amount: 0.5 }} 
+          transition={{ type: "spring", stiffness: 50, duration: 0.8 }}
+        className="flex max-md:flex-col max-md:gap-y-4 flex-row max-lg:gap-x-4 py-5 max-lg:px-8  px-[60px] justify-between items-center rounded-xl border-[1px] border-white/10 relative z-10">
            <div className="max-w-lg space-y-2">
            <h5 className="max-sm:h6 h5 text-light-title">New In Cryptocurrency?</h5>
             <p className="max-lg:s2 s1 text-light-subtitle">
@@ -39,7 +54,7 @@ const Features = () => {
             </div>
            </Button>
           </div>
-        </div>
+        </motion.div>
      </div>
     </section>
   )
